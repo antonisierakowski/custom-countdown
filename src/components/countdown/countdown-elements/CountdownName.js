@@ -1,9 +1,10 @@
 import React from 'react'
+import CountdownNameContainer from './styled/CountdownNameContainer'
 
-export default function CountdownName() {
+export default function CountdownName(props) {
     return (
-        <div>
-        
-        </div>
+        <CountdownNameContainer>
+            {props.name} starts in:
+        </CountdownNameContainer>
     )
 }

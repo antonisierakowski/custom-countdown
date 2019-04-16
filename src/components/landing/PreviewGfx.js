@@ -42,7 +42,7 @@ export default function PreviewGfx(props) {
     }
 
     const handleNext = () => {
-        setIndex(index + 1 == data.length ? 0 : index + 1)
+        setIndex(index + 1 === data.length ? 0 : index + 1)
     }    
 
     return (

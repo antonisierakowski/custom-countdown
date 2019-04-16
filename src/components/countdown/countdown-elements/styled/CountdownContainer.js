@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { backgrounds } from '../../GfxData'
+import { backgrounds } from '../../../GfxData'
 
 const CountdownContainer = styled.div`
     font-size: 4rem;
