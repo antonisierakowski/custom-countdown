@@ -1,10 +1,10 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import {indigo, pink, red} from '@material-ui/core/colors'
+import {indigo, teal, red} from '@material-ui/core/colors'
 
 const theme = createMuiTheme({
     palette: {
         type: 'dark',
-        primary: red,
+        primary: teal,
         secondary: indigo,
         error: red,
     },
@@ -16,12 +16,21 @@ const theme = createMuiTheme({
             'serif',
         ].join(','),
     },
-    button: {
-        fontFamily: [
-            "'Slabo 27px''",
-            'serif',
-        ].join(','),
+    overrides: {
+        MuiButton: {
+            text: {
+                color: 'red',
+                fontFamily: [
+                    "'Slabo 27px''",
+                    'serif',
+                ].join(','),
+            }
+
+        }
+        
     }
+
+
 })
 
 export default theme;
