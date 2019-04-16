@@ -1,23 +1,27 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import indigo from '@material-ui/core/colors/indigo'
-import pink from '@material-ui/core/colors/pink'
-import red from '@material-ui/core/colors/red'
+import {indigo, pink, red} from '@material-ui/core/colors'
 
 const theme = createMuiTheme({
     palette: {
         type: 'dark',
-        primary: indigo,
-        secondary: pink,
+        primary: red,
+        secondary: indigo,
         error: red,
     },
     typography: {
         useNextVariants: true,
         fontSize: 30,
         fontFamily: [
-            "'Assistant'",
-            'sans-serif',
+            "'Slabo 27px''",
+            'serif',
         ].join(','),
     },
+    button: {
+        fontFamily: [
+            "'Slabo 27px''",
+            'serif',
+        ].join(','),
+    }
 })
 
 export default theme;

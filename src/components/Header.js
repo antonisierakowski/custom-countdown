@@ -1,8 +1,7 @@
 import React from 'react'
 import AppBar from '@material-ui/core/AppBar'
-import Typography from '@material-ui/core/Typography'
+import { Typography, Button } from '@material-ui/core'
 import styled from 'styled-components'
-import Button from '@material-ui/core/Button'
 
 export default function Header() {
     return (

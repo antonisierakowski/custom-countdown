@@ -1,6 +1,6 @@
 import React from 'react'
 import SubmitButtonsContainer from './styled/SubmitButtonsContainer';
-import Button from '@material-ui/core/Button'
+import { Button } from '@material-ui/core/'
 
 export default function SubmitButtons(props) {
     return (

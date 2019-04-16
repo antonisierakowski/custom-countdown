@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100vw;
         color: white;
         font-size: 62.5%;
-        font-family: 'Assistant', sans-serif;
+        font-family: 'Slabo 27px', serif;
     }
     
     body {
