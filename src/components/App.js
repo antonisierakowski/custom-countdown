@@ -11,15 +11,17 @@ const App = () => {
 	return (
 		<>
 			<GlobalStyle/>
-			<Header />
 			<Router>
-				<Route exact path="/" component={LandingPage} />
+				<Route
+					exact
+					path="/"
+					render={props => <LandingPage {...props} />}
+				/>
 				<Route
 					path='/:id'
-					render={(routeProps) => (
-						<CountdownPage {...routeProps} />
-					)}
+					render={props => <CountdownPage {...props} />}
 					/>
+				<Header />
 			</Router>
 		</>
 	);

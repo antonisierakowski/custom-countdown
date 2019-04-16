@@ -4,8 +4,8 @@ import {indigo, teal, red} from '@material-ui/core/colors'
 const theme = createMuiTheme({
     palette: {
         type: 'dark',
-        primary: teal,
-        secondary: indigo,
+        primary: indigo,
+        secondary: teal,
         error: red,
     },
     typography: {

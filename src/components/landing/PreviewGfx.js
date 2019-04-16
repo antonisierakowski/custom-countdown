@@ -10,6 +10,14 @@ const PreviewContainer = styled(Card)`
         flex-direction: column;
         justify-content: space-between;
         margin-right: 1rem;
+
+        box-sizing: content-box;
+        border: 0.1rem solid rgba(0,0,0,1);
+        transition: border-color 0.2s;
+        &:hover {
+            
+            border-color: white;
+        }
     }
 `
 

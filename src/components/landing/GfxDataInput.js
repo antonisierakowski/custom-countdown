@@ -2,7 +2,7 @@ import React from 'react'
 import GfxDataInputContainer from './styled/GfxDataInputContainer';
 import PreviewGfx from './PreviewGfx'
 
-import { backgrounds, anims } from './GfxData'
+import { backgrounds, anims } from '../GfxData'
 
 export default function GfxDataInput(props) {
     const { bgIndex, setBgIndex, animIndex, setAnimIndex } = props

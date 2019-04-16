@@ -1,9 +1,10 @@
 import React from 'react'
+import NotFoundContainer from './styled/SpecialContainer'
 
 export default function NotFound() {
   	return (
-		<div>
-		
-		</div>
+		<NotFoundContainer>
+			NOT FOUND
+		</NotFoundContainer>
 	)
 }

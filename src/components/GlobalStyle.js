@@ -17,14 +17,20 @@ const GlobalStyle = createGlobalStyle`
     body {
         height: 100vh;
         width: 100vw;
+        margin: 0;
         background: url(${LandingBackground});
         background-position: center center;
-        background-size: 25rem;
+        background-size: 18rem;
     }
 
     #root {
         width: 100%;
         height: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
     }
 `
 

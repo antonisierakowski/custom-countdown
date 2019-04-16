@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { backgrounds } from '../../GfxData'
 
-const LandingPageContainer = styled.div`
+const CountdownContainer = styled.div`
     font-size: 4rem;
     width: 100%;
     height: 100%;
@@ -10,6 +11,9 @@ const LandingPageContainer = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background: url(${props => backgrounds[props.bgIndex].url});
+    background-size: cover;
+    background-position: center center;
 `
 
-export default LandingPageContainer
+export default CountdownContainer

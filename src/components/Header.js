@@ -2,23 +2,26 @@ import React from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import { Typography, Button } from '@material-ui/core'
 import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
 
 export default function Header() {
     return (
-        <AppBar position='absolute'> 
-            <HeaderContainer>
+
+            <HeaderContainer >
                 <Typography variant='h6'>
-                    Custom Countdown
+                    <NavLink to='/'>Custom Countdown</NavLink>
                 </Typography>
-                Find random countdown
             </HeaderContainer>
-        </AppBar>
+
     )
 }
 
-const HeaderContainer = styled.div`
-    padding: 0.5rem 6rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+const HeaderContainer = styled(AppBar)`
+    &&& {
+        padding: 0.5rem 6rem;
+        position: fixed;
+        /* bottom: 0; */
+        /* top: auto; */
+    }
+
 `
