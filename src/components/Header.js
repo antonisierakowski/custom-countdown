@@ -1,6 +1,6 @@
 import React from 'react'
 import AppBar from '@material-ui/core/AppBar'
-import { Typography, Button } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
@@ -9,7 +9,7 @@ export default function Header() {
 
             <HeaderContainer >
                 <Typography variant='h6'>
-                    <NavLink to='/'>Custom Countdown</NavLink>
+                    <NavLink to={'/'}>Custom Countdown</NavLink>
                 </Typography>
             </HeaderContainer>
 

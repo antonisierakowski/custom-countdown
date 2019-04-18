@@ -5,20 +5,19 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import GlobalStyle from './GlobalStyle'
 import Header from './Header'
 
-
 const App = () => {
-
+	console.log('ejj')
 	return (
 		<>
 			<GlobalStyle/>
-			<Router>
+			<Router basename={process.env.PUBLIC_URL}>
 				<Route
 					exact
-					path="/"
+					path={'/'}
 					render={props => <LandingPage {...props} />}
 				/>
 				<Route
-					path='/:id'
+					path={'/:id'}
 					render={props => <CountdownPage {...props} />}
 					/>
 				<Header />

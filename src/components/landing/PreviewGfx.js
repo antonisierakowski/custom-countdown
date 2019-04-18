@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { Icon, IconButton, Card, CardMedia, CardContent, withStyles } from '@material-ui/core'
+import { Icon, IconButton, Card, CardMedia, CardContent } from '@material-ui/core'
 
 const PreviewContainer = styled(Card)`
     &&& {
@@ -33,9 +33,6 @@ const ActionContainer = styled(CardContent)`
 
 export default function PreviewGfx(props) {
     const { data, index, setIndex, text} = props
-    const background = {
-        backgroundImage: `url(${data[index].url})`,
-    }
 
     const handlePrevious = () => {
         setIndex(index - 1 < 0 ? data.length - 1 : index - 1)

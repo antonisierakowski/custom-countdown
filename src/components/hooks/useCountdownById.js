@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import database from '../../firestoreConfig'
 
-export default function useFindCountdownById(id) {
+export default function useCountdownById(id) {
     const [ countdownData, setCountdownData ] = useState()
     const [ isLoading, setIsLoading ] = useState(true)
     const [ isNotFound, setIsNotFound ] = useState(false)

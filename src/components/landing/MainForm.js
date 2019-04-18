@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Form from './styled/Form'
 import MainDataInput from './MainDataInput'
 import GfxDataInput from './GfxDataInput.js'
@@ -6,23 +6,15 @@ import SubmitButtons from './SubmitButtons'
 import moment from 'moment'
 import database from '../../firestoreConfig'
 import shortid from 'shortid'
-
+import useSettings from '../hooks/useSettings'
 
 export default function MainForm(props) {
     const [ name, setName ] = useState('');
 	const [ date, setDate ] = useState(moment());
 	const [ bgIndex, setBgIndex ] = useState(0);
     const [ animIndex, setAnimIndex ] = useState(0);
-    const [ settings, setSettings ] = useState()
 
-    useEffect(() => {
-        setSettings({
-            name: name,
-            date: date.format(),
-            bgIndex: bgIndex,
-            animIndex: animIndex,
-        })
-    }, [name, date, bgIndex, animIndex])
+    const settings = useSettings(name, date, bgIndex, animIndex)
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -35,7 +27,7 @@ export default function MainForm(props) {
             id: newId,
         })
         .then(() => {
-            props.routeProps.history.push(`/${newId}`)
+            props.routeProps.history.push('/' + newId)
         })
     }
 
@@ -43,7 +35,7 @@ export default function MainForm(props) {
         <Form onSubmit={e => handleSubmit(e)}>
             <MainDataInput name={name} setName={setName} date={date} setDate={setDate}/>
             <GfxDataInput bgIndex={bgIndex} setBgIndex={setBgIndex} animIndex={animIndex} setAnimIndex={setAnimIndex}/>
-            <SubmitButtons setSettings={setSettings}/>
+            <SubmitButtons />
         </Form>
     )
 }
