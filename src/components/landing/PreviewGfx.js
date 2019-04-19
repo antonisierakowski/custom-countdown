@@ -12,8 +12,8 @@ const PreviewContainer = styled(Card)`
         margin-right: 1rem;
 
         box-sizing: content-box;
-        border: 0.1rem solid rgba(0,0,0,1);
-        transition: border-color 0.2s;
+        border: 0.1rem solid rgba(98,89,89,1);
+        transition: border-color 0.3s;
         &:hover {
             
             border-color: white;
@@ -32,7 +32,7 @@ const ActionContainer = styled(CardContent)`
 `
 
 export default function PreviewGfx(props) {
-    const { data, index, setIndex, text} = props
+    const { data, dataKey, index, setIndex, text} = props
 
     const handlePrevious = () => {
         setIndex(index - 1 < 0 ? data.length - 1 : index - 1)
@@ -44,7 +44,7 @@ export default function PreviewGfx(props) {
 
     return (
         <PreviewContainer >
-            <CardMedia image={data[index].url} style={{height: '100%'}}/>
+            <CardMedia image={data[index][dataKey]} style={{height: '100%'}}/>
             <ActionContainer>
                     <IconButton aria-label="previous" onClick={handlePrevious} size='small'>
                         <Icon fontSize='small'>navigate_before</Icon>

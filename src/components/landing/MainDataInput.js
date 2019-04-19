@@ -35,6 +35,7 @@ export default function MainDataInput(props) {
                 <TimePicker
                     variant="outlined"
                     margin="normal"
+                    disablePast
                     label="Event time"
                     value={date}
                     onChange={setDate}

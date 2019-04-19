@@ -4,29 +4,35 @@ import bg3 from '../img/backgrounds/astronomy-cosmos-dark-733475.jpg'
 import bg4 from '../img/backgrounds/beautiful-blue-bright-1988502.jpg'
 import bg5 from '../img/backgrounds/bright-celebration-explosion-949592.jpg'
 
+import bg1prv from '../img/bg-previews/adult-cactus-camera-297755.jpg'
+import bg2prv from '../img/bg-previews/antioxidant-beverage-citrus-1973238.jpg'
+import bg3prv from '../img/bg-previews/astronomy-cosmos-dark-733475.jpg'
+import bg4prv from '../img/bg-previews/beautiful-blue-bright-1988502.jpg'
+import bg5prv from '../img/bg-previews/bright-celebration-explosion-949592.jpg'
+
 import anim1 from '../img/anim-previews/aqua-blue-clean-1201625.jpg'
 import anim2 from '../img/anim-previews/alcohol-beverage-celebration-533257.jpg'
 
 export const backgrounds = [
     {
         url: bg1,
-        theme: 'light'
+        preview: bg1prv,
     },
     {
         url: bg2,
-        theme: 'light'
+        preview: bg2prv,
     },
     {
         url: bg3,
-        theme: 'dark'
+        preview: bg3prv,
     },
     {
         url: bg4,
-        theme: 'light'
+        preview: bg4prv,
     },
     {
         url: bg5,
-        theme: 'dark'
+        preview: bg5prv,
     },
 ]
 

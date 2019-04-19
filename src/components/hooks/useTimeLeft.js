@@ -12,9 +12,9 @@ export default function useTimeLeft(evt, now) {
         return (() => clearInterval(intervalId))
     }, [])
 
-    const timeLeft = parseTimeLeft(msLeft)
+    const timeLeftParsed = parseTimeLeft(msLeft)
 
-    return { timeLeft }
+    return { timeLeftParsed, msLeft }
 }
 
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import LoadingContainer from './styled/SpecialContainer'
+import LoadingContainer from './styled/LoadingContainer'
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 export default function NotFound() {

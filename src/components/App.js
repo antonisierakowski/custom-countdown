@@ -6,7 +6,6 @@ import GlobalStyle from './GlobalStyle'
 import Header from './Header'
 
 const App = () => {
-	console.log('ejj')
 	return (
 		<>
 			<GlobalStyle/>

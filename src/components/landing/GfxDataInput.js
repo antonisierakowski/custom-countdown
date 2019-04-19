@@ -8,8 +8,8 @@ export default function GfxDataInput(props) {
     const { bgIndex, setBgIndex, animIndex, setAnimIndex } = props
     return (
         <GfxDataInputContainer>
-            <PreviewGfx text="Choose your countdown's background" data={backgrounds} index={bgIndex} setIndex={setBgIndex}/>
-            <PreviewGfx text="Choose your countdown's animation" data={anims} index={animIndex} setIndex={setAnimIndex}/>
+            <PreviewGfx text="Choose your countdown's background" data={backgrounds} index={bgIndex} setIndex={setBgIndex} dataKey='preview'/>
+            <PreviewGfx text="Choose your countdown's animation" data={anims} index={animIndex} setIndex={setAnimIndex} dataKey='url'/>
             {/* <PreviewGfx data={anims} index={animIndex} setIndex={setAnimIndex}/> */}
         </GfxDataInputContainer>
     )

@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
         width: 100vw;
         color: white;
         font-size: 62.5%;
-        font-family: 'Slabo 27px', serif;
+        font-family: 'Ubuntu Condensed', sans-serif;
     }
     
     body {
@@ -20,7 +20,8 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         background: url(${LandingBackground});
         background-position: center center;
-        background-size: 18rem;
+        /* background-size: 18rem; */
+        background-size: cover;
     }
 
     #root {
