@@ -1,6 +1,6 @@
 import React from 'react'
 import MainDataInputContainer from './styled/MainDataInputContainer'
-import TextField from '@material-ui/core/TextField'
+import { TextField, Divider, List } from '@material-ui/core'
 import { MuiPickersUtilsProvider, TimePicker, DatePicker } from 'material-ui-pickers'
 import MomentUtils from '@date-io/moment';
 
@@ -10,7 +10,7 @@ export default function MainDataInput(props) {
     return (
         <MainDataInputContainer>
             <MuiPickersUtilsProvider utils={MomentUtils}>
-
+                <List >
                 {/* name input */}
                 <TextField
                     label="Name of your event"
@@ -23,6 +23,8 @@ export default function MainDataInput(props) {
                     onChange={e => setName(e.target.value)}
                 />
 
+                <li><Divider fullWidth/></li>
+
                 {/* date and time inputs */}
                 <DatePicker
                     variant="outlined"
@@ -32,6 +34,9 @@ export default function MainDataInput(props) {
                     value={date}
                     onChange={setDate}
                 />
+
+                <li><Divider fullWidth/></li>
+
                 <TimePicker
                     variant="outlined"
                     margin="normal"
@@ -40,6 +45,7 @@ export default function MainDataInput(props) {
                     value={date}
                     onChange={setDate}
                 />
+                </List>
             </MuiPickersUtilsProvider>
         </MainDataInputContainer>
     )

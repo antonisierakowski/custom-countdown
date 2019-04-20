@@ -9,7 +9,6 @@ const useClockDegrees = () => {
             setNow(moment())
         }, 1000)
 
-
         return () => clearInterval(intervalId)
     }, [])
 

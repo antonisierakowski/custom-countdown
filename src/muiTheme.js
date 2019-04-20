@@ -3,7 +3,7 @@ import {blueGrey, indigo, red} from '@material-ui/core/colors'
 
 const theme = createMuiTheme({
     palette: {
-        type: 'dark',
+        type: 'light',
         primary: blueGrey,
         secondary: indigo,
         error: red,

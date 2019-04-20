@@ -1,6 +1,6 @@
 import React from 'react'
 import NotFoundContainer from './styled/NotFoundContainer'
-import Clock from './anims/useClockDegrees'
+import Clock from './anims/Clock'
 
 export default function NotFound() {
   	return (

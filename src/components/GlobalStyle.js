@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
         height: 100vh;
         width: 100vw;
         color: white;
-        font-size: 62.5%;
+        font-size: 50%;
         font-family: 'Ubuntu Condensed', sans-serif;
     }
     
