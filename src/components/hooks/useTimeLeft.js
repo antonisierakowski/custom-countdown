@@ -3,18 +3,21 @@ import moment from 'moment'
 
 export default function useTimeLeft(evt, now) {
     const [ msLeft, setMsLeft] = useState(evt - now)
+    const [ isOver, setIsOver ] = useState(msLeft <= 0)
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
+        const timeoutId = setTimeout(() => {
             setMsLeft(prevstate => prevstate - 1000)
+            setIsOver(msLeft <= 0)
         }, 1000)
 
-        return (() => clearInterval(intervalId))
-    }, [])
+        return (() => clearTimeout(timeoutId))
+    }, [msLeft])
 
+    
     const timeLeftParsed = parseTimeLeft(msLeft)
 
-    return { timeLeftParsed, msLeft }
+    return { timeLeftParsed, msLeft, isOver }
 }
 
 

@@ -1,14 +1,13 @@
 import React from 'react'
 import AnimContainer from './styled/AnimContainer'
-import Glass from '../anims/Glass'
-import useTimeLeft from '../../hooks/useTimeLeft'
+import {anims} from '../../GfxData'
+
 
 export default function Anim(props) {
-    const { index, timeLeft } = props;
-    // const timeLeft = useTimeLeft
+    const { counting, finished, isOver } = props;
     return (
         <AnimContainer>
-            {index === 0 && <Glass/>}
+            {!isOver ? counting : finished} 
         </AnimContainer>
     )
 }

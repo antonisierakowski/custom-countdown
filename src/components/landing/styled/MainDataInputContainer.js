@@ -7,13 +7,21 @@ const MainDataInputContainer = styled(Card)`
         height: 60%;
         width: 25%;
 
-        ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+/* 
+        div {
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
             /* align-items: center; */
-        }
+        /* }  */
     }
 `
 

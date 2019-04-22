@@ -7,11 +7,13 @@ import MomentUtils from '@date-io/moment';
 export default function MainDataInput(props) {
     const { name, setName, date, setDate } = props
 
+    const width = {width: '75%'}
+
     return (
-        <MainDataInputContainer>
+        <MainDataInputContainer elevation={20}>
             <MuiPickersUtilsProvider utils={MomentUtils}>
-                <List >
                 {/* name input */}
+                
                 <TextField
                     label="Name of your event"
                     type="text"
@@ -21,9 +23,10 @@ export default function MainDataInput(props) {
                     variant="outlined"
                     value={name}
                     onChange={e => setName(e.target.value)}
+                    style={width}
                 />
 
-                <li><Divider fullWidth/></li>
+                {/* <li><Divider fullWidth/></li> */}
 
                 {/* date and time inputs */}
                 <DatePicker
@@ -33,9 +36,10 @@ export default function MainDataInput(props) {
                     label="Event date"
                     value={date}
                     onChange={setDate}
+                    style={width}
                 />
 
-                <li><Divider fullWidth/></li>
+                {/* <li><Divider fullWidth/></li> */}
 
                 <TimePicker
                     variant="outlined"
@@ -44,8 +48,9 @@ export default function MainDataInput(props) {
                     label="Event time"
                     value={date}
                     onChange={setDate}
+                    style={width}
                 />
-                </List>
+                
             </MuiPickersUtilsProvider>
         </MainDataInputContainer>
     )

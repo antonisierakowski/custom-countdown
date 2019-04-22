@@ -7,11 +7,11 @@ import { NavLink } from 'react-router-dom'
 export default function Header() {
     return (
 
-            <HeaderContainer >
-                <Typography variant='h6'>
-                    <NavLink to={'/'}>Custom Countdown</NavLink>
-                </Typography>
-            </HeaderContainer>
+        <HeaderContainer >
+            <Typography variant='h6' color='inherit'>
+                <NavLink to={'/'}>Custom Countdown</NavLink>
+            </Typography>
+        </HeaderContainer>
 
     )
 }

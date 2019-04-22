@@ -1,23 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Icon, IconButton, Card, CardMedia, CardContent } from '@material-ui/core'
+import { Icon, IconButton, Card, CardMedia, CardContent, Typography } from '@material-ui/core'
 
 const PreviewContainer = styled(Card)`
     &&& {
-        width: 30rem;
-        height: 15rem;
+        width: 100%;
+        height: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         margin-right: 1rem;
-
-        box-sizing: content-box;
-        border: 0.1rem solid rgba(98,89,89,1);
+        border-radius: inherit;
+        /* box-sizing: content-box; */
+/*   
         transition: border-color 0.3s;
         &:hover {
             
             border-color: white;
-        }
+        } */
     }
 `
 
@@ -49,7 +49,7 @@ export default function PreviewGfx(props) {
                     <IconButton aria-label="previous" onClick={handlePrevious} size='small'>
                         <Icon fontSize='small'>navigate_before</Icon>
                     </IconButton>
-                    {text}
+                    <Typography style={{fontSize: '1.5rem'}} color='textSecondary'>{text}</Typography>
                     <IconButton aria-label="next" onClick={handleNext} size='small'>
                         <Icon fontSize='small'>navigate_next</Icon>
                     </IconButton>                    

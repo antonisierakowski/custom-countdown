@@ -6,10 +6,10 @@ const GfxDataInputContainer = styled(Paper)`
         border-radius: 2rem;
         height: 60%;
         width: 25%;
-        display: flex;
+        /* display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        align-items: center;
+        align-items: center; */
     }
 `
 

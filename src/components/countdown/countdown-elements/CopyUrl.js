@@ -35,7 +35,7 @@ export default function CopyUrl() {
                 <CopyUrlField>{url}</CopyUrlField>
                 <Tooltip title="Copy to clipboard" >
                     <IconButton ref={copyUrlRef} onClick={copyToClipboard}>
-                        <Icon style={{fontSize: '2rem'}}>file_copy</Icon>
+                        <Icon style={{fontSize: '2rem', color: 'white'}}>file_copy</Icon>
                     </IconButton>
                 </Tooltip>
             </div>
