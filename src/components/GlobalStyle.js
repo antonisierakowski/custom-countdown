@@ -1,10 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-import bg1 from '../img/landing-backgrounds/LANDING1.jpg'
-import bg2 from '../img/landing-backgrounds/LANDING2.jpg'
-import bg3 from '../img/landing-backgrounds/LANDING3.jpg'
-import bg4 from '../img/landing-backgrounds/LANDING4.jpg'
-
-const backgrounds = [bg1, bg2, bg3, bg4]
 
 export const tabletQuery = '992px'
 export const mobileQuery = '567px'
@@ -12,12 +6,11 @@ export const mobileQuery = '567px'
 const GlobalStyle = createGlobalStyle`
     * {
         box-sizing: border-box;
+        transition: 0.2s;
     }
 
     html {
-        height: 100vh;
-        @media (max-width: ${mobileQuery}) { height: 150vh; }
-        @media (max-height: 400px) and (orientation: landscape) { height: 150vh; }
+        min-height: 100%;
         width: 100vw;
         color: white;
         font-size: 50%;
@@ -30,10 +23,6 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
         width: 100%;
         margin: 0;
-        background: url(${backgrounds[Math.floor(Math.random() * (backgrounds.length - 1))]});
-        background-position: center center;
-        /* background-size: 18rem; */
-        background-size: cover;
     }
 
     #root {
