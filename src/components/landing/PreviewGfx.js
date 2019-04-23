@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Icon, IconButton, Card, CardMedia, CardContent, Typography } from '@material-ui/core'
+import { tabletQuery, mobileQuery } from '../GlobalStyle'
 
 const PreviewContainer = styled(Card)`
     &&& {
@@ -10,19 +11,16 @@ const PreviewContainer = styled(Card)`
         flex-direction: column;
         justify-content: space-between;
         margin-right: 1rem;
-        border-radius: inherit;
-        /* box-sizing: content-box; */
-/*   
-        transition: border-color 0.3s;
-        &:hover {
-            
-            border-color: white;
-        } */
+        border-top-left-radius: ${props => !props.border ? 'inherit' : '0'};
+        border-top-right-radius: ${props => !props.border ? 'inherit' : '0'};
+        border-bottom-left-radius: ${props => !props.border ? '0' : 'inherit'};
+        border-bottom-right-radius: ${props => !props.border ? '0' : 'inherit'};
     }
 `
 
 const ActionContainer = styled(CardContent)`
     &&& {
+        max-height: 50%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -32,7 +30,7 @@ const ActionContainer = styled(CardContent)`
 `
 
 export default function PreviewGfx(props) {
-    const { data, dataKey, index, setIndex, text} = props
+    const { data, dataKey, index, setIndex, text, border} = props
 
     const handlePrevious = () => {
         setIndex(index - 1 < 0 ? data.length - 1 : index - 1)
@@ -43,16 +41,16 @@ export default function PreviewGfx(props) {
     }    
 
     return (
-        <PreviewContainer >
+        <PreviewContainer border={border} >
             <CardMedia image={data[index][dataKey]} style={{height: '100%'}}/>
             <ActionContainer>
-                    <IconButton aria-label="previous" onClick={handlePrevious} size='small'>
-                        <Icon fontSize='small'>navigate_before</Icon>
-                    </IconButton>
-                    <Typography style={{fontSize: '1.5rem'}} color='textSecondary'>{text}</Typography>
-                    <IconButton aria-label="next" onClick={handleNext} size='small'>
-                        <Icon fontSize='small'>navigate_next</Icon>
-                    </IconButton>                    
+                <IconButton aria-label="previous" onClick={handlePrevious} size='small'>
+                    <Icon fontSize='small'>navigate_before</Icon>
+                </IconButton>
+                <Typography style={{fontSize: '1.5rem'}} color='textSecondary'>{text}</Typography>
+                <IconButton aria-label="next" onClick={handleNext} size='small'>
+                    <Icon fontSize='small'>navigate_next</Icon>
+                </IconButton>                    
             </ActionContainer>
         </PreviewContainer>
     )

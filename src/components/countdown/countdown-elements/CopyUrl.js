@@ -1,40 +1,38 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import CopyUrlContainer from './styled/CopyUrlContainer'
 import CopyUrlField from './styled/CopyUrlField'
-import { IconButton, Icon, Tooltip, Snackbar } from '@material-ui/core'
+import { IconButton, Icon, Tooltip } from '@material-ui/core'
 
 export default function CopyUrl() {
-    const copyUrlRef = useRef(null)
-    const [ copied, setCopied ] = useState(false)
+    const [ isCopied, setIsCopied ] = useState(false)
+
     const url = document.location.host + document.location.pathname
 
-    let timeoutId;
-
-    function copyToClipboard(e) {
-        console.log(copyUrlRef)
-        navigator.clipboard.writeText(url)
-        setCopied(true);
-        timeoutId = setTimeout(() => {
-            setCopied(false)
-        }, 1500)
-        // copyUrlRef.current.select();
-        // document.execCommand('copy');
-        // // This is just personal preference.
-        // // I prefer to not show the the whole text area selected.
-        // e.target.focus();
+    function handleCopy() {
+        const textField = document.createElement('textarea')
+        textField.innerText = url;
+        document.body.appendChild(textField)
+        textField.select()
+        document.execCommand('copy')
+        textField.remove()
+        setIsCopied(true)
+        setTimeout(() => setIsCopied(false), 800)
     }
 
-    useEffect(() => {
-        return () => clearTimeout(timeoutId)
-    })
+ 
+
 
     return (
         <CopyUrlContainer>
             share your countdown:
             <div>
-                <CopyUrlField>{url}</CopyUrlField>
+                <CopyUrlField>
+                    <span className={isCopied ? 'animated rubberBand fast' : ''}>
+                        {url}
+                    </span>
+                </CopyUrlField>
                 <Tooltip title="Copy to clipboard" >
-                    <IconButton ref={copyUrlRef} onClick={copyToClipboard}>
+                    <IconButton onClick={handleCopy}>
                         <Icon style={{fontSize: '2rem', color: 'white'}}>file_copy</Icon>
                     </IconButton>
                 </Tooltip>
