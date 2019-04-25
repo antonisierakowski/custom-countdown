@@ -6,7 +6,7 @@ import { tabletQuery, mobileQuery } from './GlobalStyle'
 
 export default function Header() {
     return (
-        <HeaderContainer >
+        <HeaderContainer className='animated fadeIn slow'>
             <Typography variant='h6' color='inherit'>
                 <NavLink to={'/'}>Custom Countdown</NavLink>
             </Typography>

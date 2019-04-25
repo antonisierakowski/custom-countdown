@@ -14,7 +14,7 @@ export default function ActualCountdown(props) {
     const countdownFinished = name + ' has already started!'
 
     return (
-        <ActualCountdownContainer>
+        <ActualCountdownContainer className='animated fadeInLeft fast'>
             {!isOver ? countdown : countdownFinished}
         </ActualCountdownContainer>
     )

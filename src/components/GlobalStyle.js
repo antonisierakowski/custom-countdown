@@ -6,7 +6,6 @@ export const mobileQuery = '567px'
 const GlobalStyle = createGlobalStyle`
     * {
         box-sizing: border-box;
-        transition: 0.2s;
     }
 
     html {

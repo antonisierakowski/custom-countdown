@@ -5,7 +5,7 @@ import CreateCountdownButton from './styled/CreateCountdownButton'
 
 export default function SubmitButtons(props) {
     return (
-        <SubmitButtonsContainer>
+        <SubmitButtonsContainer className='animated fadeInRight slow'>
             <CreateCountdownButton variant="contained" color="primary" type='submit' size='large'>
                 Create countdown!
             </CreateCountdownButton>

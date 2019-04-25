@@ -11,7 +11,7 @@ export default function MainDataInput(props) {
     const width = {width: '70%'}
     const iconStyle = {color: 'black', fontSize: '4rem'}
     return (
-        <MainDataInputContainer elevation={20}>
+        <MainDataInputContainer elevation={20} className='animated fadeInLeft slow'>
             <MuiPickersUtilsProvider utils={MomentUtils}>
        
                 <InputLabel>

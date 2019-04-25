@@ -23,7 +23,7 @@ export default function CopyUrl() {
 
 
     return (
-        <CopyUrlContainer>
+        <CopyUrlContainer className='animated fadeInUp fast'>
             share your countdown:
             <div>
                 <CopyUrlField>
